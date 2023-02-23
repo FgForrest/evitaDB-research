@@ -1,0 +1,14 @@
+version: '2.2'
+
+services:
+  postgres:
+    image: evitadb/postgres:latest
+    shm_size: 1g
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=catalog_testCatalog
+    ports:
+      - 5432:5432
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d

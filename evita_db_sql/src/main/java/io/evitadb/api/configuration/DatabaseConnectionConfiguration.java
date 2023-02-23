@@ -1,0 +1,67 @@
+/*
+ *                         _ _        ____  ____
+ *               _____   _(_) |_ __ _|  _ \| __ )
+ *              / _ \ \ / / | __/ _` | | | |  _ \
+ *             |  __/\ V /| | || (_| | |_| | |_) |
+ *              \___| \_/ |_|\__\__,_|____/|____/
+ *
+ *   Copyright (c) 2023
+ *
+ *   Licensed under the Business Source License, Version 1.1 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *   https://github.com/FgForrest/evitaDB/blob/main/LICENSE
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
+package io.evitadb.api.configuration;
+
+import lombok.Data;
+
+/**
+ * Configuration for connection to catalog's database
+ *
+ * @author Lukáš Hornych 2021
+ */
+@Data
+public class DatabaseConnectionConfiguration {
+
+    /**
+     * URL of underlying PostgreSQL database server
+     */
+    private final String dbUrl;
+
+    /**
+     * Name of database in underlying PostgreSQL database server created for this catalog
+     */
+    private final String dbName;
+
+    /**
+     * Database user for connecting to underlying PostgreSQL database
+     */
+    private final String dbUsername;
+
+    /**
+     * Constructed Jdbc url
+     */
+    private final String jdbcUrl;
+
+    /**
+     * Database password for connecting to underlying PostgreSQL database
+     */
+    private final String dbPassword;
+
+    public DatabaseConnectionConfiguration(String dbUrl, String dbName, String dbUsername, String dbPassword) {
+        this.dbUrl = dbUrl;
+        this.dbName = dbName;
+        this.dbUsername = dbUsername;
+        this.dbPassword = dbPassword;
+        this.jdbcUrl =  String.format("jdbc:postgresql://%s/%s", dbUrl, dbName);
+    }
+}

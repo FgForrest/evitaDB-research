@@ -1,0 +1,369 @@
+{
+  "bool": {
+    "must": [
+      {
+        "bool": {
+          "should": [
+            {
+              "bool": {
+                "filter": [
+                  {
+                    "nested": {
+                      "query": {
+                        "bool": {
+                          "must": [
+                            {
+                              "range": {
+                                "paths.leftBound": {
+                                  "from": 2,
+                                  "to": null,
+                                  "include_lower": true,
+                                  "include_upper": true,
+                                  "boost": 1.0
+                                }
+                              }
+                            },
+                            {
+                              "range": {
+                                "paths.rightBound": {
+                                  "from": null,
+                                  "to": 854725211716,
+                                  "include_lower": true,
+                                  "include_upper": true,
+                                  "boost": 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "filter": [
+                            {
+                              "nested": {
+                                "query": {
+                                  "bool": {
+                                    "must": [
+                                      {
+                                        "match": {
+                                          "paths.type.value.keyword": {
+                                            "query": "CATEGORY",
+                                            "operator": "OR",
+                                            "prefix_length": 0,
+                                            "max_expansions": 50,
+                                            "fuzzy_transpositions": true,
+                                            "lenient": false,
+                                            "zero_terms_query": "NONE",
+                                            "auto_generate_synonyms_phrase_query": true,
+                                            "boost": 1.0
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "match": {
+                                          "paths.type.valueClass": {
+                                            "query": "io.evitadb.test.Entities",
+                                            "operator": "OR",
+                                            "prefix_length": 0,
+                                            "max_expansions": 50,
+                                            "fuzzy_transpositions": true,
+                                            "lenient": false,
+                                            "zero_terms_query": "NONE",
+                                            "auto_generate_synonyms_phrase_query": true,
+                                            "boost": 1.0
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0
+                                  }
+                                },
+                                "path": "paths.type",
+                                "ignore_unmapped": false,
+                                "score_mode": "max",
+                                "boost": 1.0
+                              }
+                            }
+                          ],
+                          "adjust_pure_negative": true,
+                          "boost": 1.0
+                        }
+                      },
+                      "path": "paths",
+                      "ignore_unmapped": false,
+                      "score_mode": "max",
+                      "boost": 1.0
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            },
+            {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "primaryKey": {
+                        "query": 2,
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  },
+                  {
+                    "match": {
+                      "type.value.keyword": {
+                        "query": "CATEGORY",
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            }
+          ],
+          "adjust_pure_negative": true,
+          "minimum_should_match": "1",
+          "boost": 1.0
+        }
+      },
+      {
+        "bool": {
+          "should": [
+            {
+              "bool": {
+                "should": [
+                  {
+                    "bool": {
+                      "must": [
+                        {
+                          "bool": {
+                            "filter": [
+                              {
+                                "nested": {
+                                  "query": {
+                                    "bool": {
+                                      "filter": [
+                                        {
+                                          "nested": {
+                                            "query": {
+                                              "match": {
+                                                "references.referencedEntityType.value.keyword": {
+                                                  "query": "PARAMETER",
+                                                  "operator": "OR",
+                                                  "prefix_length": 0,
+                                                  "max_expansions": 50,
+                                                  "fuzzy_transpositions": true,
+                                                  "lenient": false,
+                                                  "zero_terms_query": "NONE",
+                                                  "auto_generate_synonyms_phrase_query": true,
+                                                  "boost": 1.0
+                                                }
+                                              }
+                                            },
+                                            "path": "references.referencedEntityType",
+                                            "ignore_unmapped": false,
+                                            "score_mode": "none",
+                                            "boost": 1.0
+                                          }
+                                        }
+                                      ],
+                                      "should": [
+                                        {
+                                          "match": {
+                                            "references.referencedEntityPrimaryKey": {
+                                              "query": 7,
+                                              "operator": "OR",
+                                              "prefix_length": 0,
+                                              "max_expansions": 50,
+                                              "fuzzy_transpositions": true,
+                                              "lenient": false,
+                                              "zero_terms_query": "NONE",
+                                              "auto_generate_synonyms_phrase_query": true,
+                                              "boost": 1.0
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "adjust_pure_negative": true,
+                                      "minimum_should_match": "1",
+                                      "boost": 1.0
+                                    }
+                                  },
+                                  "path": "references",
+                                  "ignore_unmapped": false,
+                                  "score_mode": "max",
+                                  "boost": 1.0
+                                }
+                              }
+                            ],
+                            "adjust_pure_negative": true,
+                            "boost": 1.0
+                          }
+                        }
+                      ],
+                      "adjust_pure_negative": true,
+                      "boost": 1.0
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "minimum_should_match": "1",
+                "boost": 1.0
+              }
+            },
+            {
+              "bool": {
+                "must": [
+                  {
+                    "bool": {
+                      "must": [
+                        {
+                          "bool": {
+                            "filter": [
+                              {
+                                "nested": {
+                                  "query": {
+                                    "bool": {
+                                      "filter": [
+                                        {
+                                          "nested": {
+                                            "query": {
+                                              "match": {
+                                                "references.referencedEntityType.value.keyword": {
+                                                  "query": "PARAMETER",
+                                                  "operator": "OR",
+                                                  "prefix_length": 0,
+                                                  "max_expansions": 50,
+                                                  "fuzzy_transpositions": true,
+                                                  "lenient": false,
+                                                  "zero_terms_query": "NONE",
+                                                  "auto_generate_synonyms_phrase_query": true,
+                                                  "boost": 1.0
+                                                }
+                                              }
+                                            },
+                                            "path": "references.referencedEntityType",
+                                            "ignore_unmapped": false,
+                                            "score_mode": "none",
+                                            "boost": 1.0
+                                          }
+                                        }
+                                      ],
+                                      "should": [
+                                        {
+                                          "match": {
+                                            "references.referencedEntityPrimaryKey": {
+                                              "query": 1,
+                                              "operator": "OR",
+                                              "prefix_length": 0,
+                                              "max_expansions": 50,
+                                              "fuzzy_transpositions": true,
+                                              "lenient": false,
+                                              "zero_terms_query": "NONE",
+                                              "auto_generate_synonyms_phrase_query": true,
+                                              "boost": 1.0
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "adjust_pure_negative": true,
+                                      "minimum_should_match": "1",
+                                      "boost": 1.0
+                                    }
+                                  },
+                                  "path": "references",
+                                  "ignore_unmapped": false,
+                                  "score_mode": "max",
+                                  "boost": 1.0
+                                }
+                              }
+                            ],
+                            "adjust_pure_negative": true,
+                            "boost": 1.0
+                          }
+                        }
+                      ],
+                      "adjust_pure_negative": true,
+                      "boost": 1.0
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            }
+          ],
+          "adjust_pure_negative": true,
+          "minimum_should_match": "1",
+          "boost": 1.0
+        }
+      }
+    ],
+    "filter": [
+      {
+        "nested": {
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "match": {
+                    "type.value.keyword": {
+                      "query": "PRODUCT",
+                      "operator": "OR",
+                      "prefix_length": 0,
+                      "max_expansions": 50,
+                      "fuzzy_transpositions": true,
+                      "lenient": false,
+                      "zero_terms_query": "NONE",
+                      "auto_generate_synonyms_phrase_query": true,
+                      "boost": 1.0
+                    }
+                  }
+                },
+                {
+                  "match": {
+                    "type.valueClass": {
+                      "query": "io.evitadb.test.Entities",
+                      "operator": "OR",
+                      "prefix_length": 0,
+                      "max_expansions": 50,
+                      "fuzzy_transpositions": true,
+                      "lenient": false,
+                      "zero_terms_query": "NONE",
+                      "auto_generate_synonyms_phrase_query": true,
+                      "boost": 1.0
+                    }
+                  }
+                }
+              ],
+              "adjust_pure_negative": true,
+              "boost": 1.0
+            }
+          },
+          "path": "type",
+          "ignore_unmapped": false,
+          "score_mode": "max",
+          "boost": 1.0
+        }
+      }
+    ],
+    "adjust_pure_negative": true,
+    "boost": 1.0
+  }
+}

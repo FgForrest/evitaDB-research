@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "primaryKey": 1,
+  "type": {
+    "valueClass": "io.evitadb.test.Entities",
+    "value": "CATEGORY"
+  },
+  "indexName": "evita_testcatalog",
+  "locales": [
+    "cs_CZ",
+    "en"
+  ],
+  "dropped": false,
+  "hierarchicalPlacement": {
+    "version": 1,
+    "orderAmongSiblings": 1,
+    "dropped": false
+  },
+  "paths": [
+    {
+      "path": "root",
+      "type": {
+        "valueClass": "io.evitadb.test.Entities",
+        "value": "CATEGORY"
+      }
+    }
+  ],
+  "attributes": {
+    "type": {
+      "valueClass": "io.evitadb.test.Entities",
+      "value": "CATEGORY"
+    },
+    "types": [
+      "code",
+      "priority",
+      "validity",
+      "name",
+      "url",
+      "url",
+      "name"
+    ],
+    "indexName": "evita_testcatalog",
+    "attributeValues": [
+      {
+        "version": 1,
+        "key": {
+          "attributeName": "code",
+          "code": true,
+          "locale": null
+        },
+        "value": {
+          "singleValue": "Automotive-Books-1",
+          "key": "code",
+          "valueWithType": "null_code",
+          "date": null,
+          "zoneId": null,
+          "booleanValue": null,
+          "byteValue": null,
+          "longValue": null,
+          "integerValue": null,
+          "shortValue": null,
+          "doubleValue": null,
+          "bigDecimal": null,
+          "floatValue": null,
+          "number": null,
+          "other": null,
+          "integerRange": null,
+          "floatRange": null,
+          "longRange": null,
+          "doubleRange": null,
+          "numberRange": null,
+          "dateRange": null,
+          "locale": null,
+          "values": null,
+          "multiple": null
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "attributeName": "priority",
+          "priority": true,
+          "locale": null
+        },
+        "value": {
+          "singleValue": null,
+          "key": "priority",
+          "valueWithType": "null_priority",
+          "date": null,
+          "zoneId": null,
+          "booleanValue": null,
+          "byteValue": null,
+          "longValue": 13394,
+          "integerValue": null,
+          "shortValue": null,
+          "doubleValue": null,
+          "bigDecimal": null,
+          "floatValue": null,
+          "number": null,
+          "other": null,
+          "integerRange": null,
+          "floatRange": null,
+          "longRange": null,
+          "doubleRange": null,
+          "numberRange": null,
+          "dateRange": null,
+          "locale": null,
+          "values": null,
+          "multiple": null
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "attributeName": "validity",
+          "validity": true,
+          "locale": null
+        },
+        "value": {
+          "singleValue": null,
+          "key": "validity",
+          "valueWithType": "null_validity",
+          "date": null,
+          "zoneId": null,
+          "booleanValue": null,
+          "byteValue": null,
+          "longValue": null,
+          "integerValue": null,
+          "shortValue": null,
+          "doubleValue": null,
+          "bigDecimal": null,
+          "floatValue": null,
+          "number": null,
+          "other": null,
+          "integerRange": null,
+          "floatRange": null,
+          "longRange": null,
+          "doubleRange": null,
+          "numberRange": null,
+          "dateRange": {
+            "gte": 1388530800,
+            "lte": 1483138800,
+            "dateFromZone": "Europe/Prague",
+            "dateToZone": "Europe/Prague"
+          },
+          "locale": null,
+          "values": null,
+          "multiple": null
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "attributeName": "name",
+          "name": true,
+          "locale": "en"
+        },
+        "value": {
+          "singleValue": "Automotive & Books",
+          "key": "name",
+          "valueWithType": "null_name",
+          "date": null,
+          "zoneId": null,
+          "booleanValue": null,
+          "byteValue": null,
+          "longValue": null,
+          "integerValue": null,
+          "shortValue": null,
+          "doubleValue": null,
+          "bigDecimal": null,
+          "floatValue": null,
+          "number": null,
+          "other": null,
+          "integerRange": null,
+          "floatRange": null,
+          "longRange": null,
+          "doubleRange": null,
+          "numberRange": null,
+          "dateRange": null,
+          "locale": null,
+          "values": null,
+          "multiple": null
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "attributeName": "url",
+          "url": true,
+          "locale": "cs_CZ"
+        },
+        "value": {
+          "singleValue": "https://www.evita.org/Automotive-Books-1",
+          "key": "url",
+          "valueWithType": "null_url",
+          "date": null,
+          "zoneId": null,
+          "booleanValue": null,
+          "byteValue": null,
+          "longValue": null,
+          "integerValue": null,
+          "shortValue": null,
+          "doubleValue": null,
+          "bigDecimal": null,
+          "floatValue": null,
+          "number": null,
+          "other": null,
+          "integerRange": null,
+          "floatRange": null,
+          "longRange": null,
+          "doubleRange": null,
+          "numberRange": null,
+          "dateRange": null,
+          "locale": null,
+          "values": null,
+          "multiple": null
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "attributeName": "url",
+          "url": true,
+          "locale": "en"
+        },
+        "value": {
+          "singleValue": "https://www.evita.io/Automotive-Books-2",
+          "key": "url",
+          "valueWithType": "null_url",
+          "date": null,
+          "zoneId": null,
+          "booleanValue": null,
+          "byteValue": null,
+          "longValue": null,
+          "integerValue": null,
+          "shortValue": null,
+          "doubleValue": null,
+          "bigDecimal": null,
+          "floatValue": null,
+          "number": null,
+          "other": null,
+          "integerRange": null,
+          "floatRange": null,
+          "longRange": null,
+          "doubleRange": null,
+          "numberRange": null,
+          "dateRange": null,
+          "locale": null,
+          "values": null,
+          "multiple": null
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "attributeName": "name",
+          "name": true,
+          "locale": "cs_CZ"
+        },
+        "value": {
+          "singleValue": "Garden & Outdoors",
+          "key": "name",
+          "valueWithType": "null_name",
+          "date": null,
+          "zoneId": null,
+          "booleanValue": null,
+          "byteValue": null,
+          "longValue": null,
+          "integerValue": null,
+          "shortValue": null,
+          "doubleValue": null,
+          "bigDecimal": null,
+          "floatValue": null,
+          "number": null,
+          "other": null,
+          "integerRange": null,
+          "floatRange": null,
+          "longRange": null,
+          "doubleRange": null,
+          "numberRange": null,
+          "dateRange": null,
+          "locale": null,
+          "values": null,
+          "multiple": null
+        },
+        "dropped": false
+      }
+    ]
+  },
+  "associatedData": {
+    "type": {
+      "valueClass": "io.evitadb.test.Entities",
+      "value": "CATEGORY"
+    },
+    "indexName": "evita_testcatalog",
+    "reflectionLookup": null,
+    "associatedDataValues": []
+  }
+}

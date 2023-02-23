@@ -1,0 +1,327 @@
+{
+  "from": 0,
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "filter": [
+              {
+                "nested": {
+                  "query": {
+                    "bool": {
+                      "must": [
+                        {
+                          "bool": {
+                            "must": [
+                              {
+                                "match": {
+                                  "prices.currency": {
+                                    "query": "EUR",
+                                    "operator": "AND",
+                                    "prefix_length": 0,
+                                    "max_expansions": 50,
+                                    "fuzzy_transpositions": true,
+                                    "lenient": false,
+                                    "zero_terms_query": "NONE",
+                                    "auto_generate_synonyms_phrase_query": true,
+                                    "boost": 1.0
+                                  }
+                                }
+                              }
+                            ],
+                            "adjust_pure_negative": true,
+                            "boost": 1.0
+                          }
+                        },
+                        {
+                          "bool": {
+                            "must": [
+                              {
+                                "terms": {
+                                  "prices.priceList": [
+                                    "vip",
+                                    "basic"
+                                  ],
+                                  "boost": 1.0
+                                }
+                              }
+                            ],
+                            "adjust_pure_negative": true,
+                            "boost": 1.0
+                          }
+                        },
+                        {
+                          "bool": {
+                            "should": [
+                              {
+                                "bool": {
+                                  "filter": [
+                                    {
+                                      "nested": {
+                                        "query": {
+                                          "bool": {
+                                            "must": [
+                                              {
+                                                "range": {
+                                                  "prices.validity.lte": {
+                                                    "from": 1273010400,
+                                                    "to": null,
+                                                    "include_lower": true,
+                                                    "include_upper": true,
+                                                    "boost": 1.0
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "range": {
+                                                  "prices.validity.gte": {
+                                                    "from": null,
+                                                    "to": 1273010400,
+                                                    "include_lower": true,
+                                                    "include_upper": true,
+                                                    "boost": 1.0
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "adjust_pure_negative": true,
+                                            "boost": 1.0
+                                          }
+                                        },
+                                        "path": "prices.validity",
+                                        "ignore_unmapped": false,
+                                        "score_mode": "max",
+                                        "boost": 1.0
+                                      }
+                                    }
+                                  ],
+                                  "adjust_pure_negative": true,
+                                  "boost": 1.0
+                                }
+                              },
+                              {
+                                "bool": {
+                                  "must": [
+                                    {
+                                      "match": {
+                                        "prices.hasValidity": {
+                                          "query": false,
+                                          "operator": "OR",
+                                          "prefix_length": 0,
+                                          "max_expansions": 50,
+                                          "fuzzy_transpositions": true,
+                                          "lenient": false,
+                                          "zero_terms_query": "NONE",
+                                          "auto_generate_synonyms_phrase_query": true,
+                                          "boost": 1.0
+                                        }
+                                      }
+                                    }
+                                  ],
+                                  "adjust_pure_negative": true,
+                                  "boost": 1.0
+                                }
+                              }
+                            ],
+                            "adjust_pure_negative": true,
+                            "minimum_should_match": "1",
+                            "boost": 1.0
+                          }
+                        },
+                        {
+                          "bool": {
+                            "should": [
+                              {
+                                "bool": {
+                                  "must": [
+                                    {
+                                      "range": {
+                                        "prices.priceWithoutVat": {
+                                          "from": 80,
+                                          "to": null,
+                                          "include_lower": true,
+                                          "include_upper": true,
+                                          "boost": 1.0
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "range": {
+                                        "prices.priceWithoutVat": {
+                                          "from": null,
+                                          "to": 150,
+                                          "include_lower": true,
+                                          "include_upper": true,
+                                          "boost": 1.0
+                                        }
+                                      }
+                                    }
+                                  ],
+                                  "adjust_pure_negative": true,
+                                  "boost": 1.0
+                                }
+                              },
+                              {
+                                "bool": {
+                                  "must": [
+                                    {
+                                      "match": {
+                                        "prices.priceInnerRecordHandling": {
+                                          "query": "SUM",
+                                          "operator": "OR",
+                                          "prefix_length": 0,
+                                          "max_expansions": 50,
+                                          "fuzzy_transpositions": true,
+                                          "lenient": false,
+                                          "zero_terms_query": "NONE",
+                                          "auto_generate_synonyms_phrase_query": true,
+                                          "boost": 1.0
+                                        }
+                                      }
+                                    }
+                                  ],
+                                  "adjust_pure_negative": true,
+                                  "boost": 1.0
+                                }
+                              }
+                            ],
+                            "adjust_pure_negative": true,
+                            "minimum_should_match": "1",
+                            "boost": 1.0
+                          }
+                        },
+                        {
+                          "match": {
+                            "prices.indexed": {
+                              "query": true,
+                              "operator": "OR",
+                              "prefix_length": 0,
+                              "max_expansions": 50,
+                              "fuzzy_transpositions": true,
+                              "lenient": false,
+                              "zero_terms_query": "NONE",
+                              "auto_generate_synonyms_phrase_query": true,
+                              "boost": 1.0
+                            }
+                          }
+                        },
+                        {
+                          "match": {
+                            "prices.dropped": {
+                              "query": false,
+                              "operator": "OR",
+                              "prefix_length": 0,
+                              "max_expansions": 50,
+                              "fuzzy_transpositions": true,
+                              "lenient": false,
+                              "zero_terms_query": "NONE",
+                              "auto_generate_synonyms_phrase_query": true,
+                              "boost": 1.0
+                            }
+                          }
+                        }
+                      ],
+                      "adjust_pure_negative": true,
+                      "boost": 1.0
+                    }
+                  },
+                  "path": "prices",
+                  "ignore_unmapped": false,
+                  "score_mode": "max",
+                  "boost": 1.0
+                }
+              }
+            ],
+            "adjust_pure_negative": true,
+            "boost": 1.0
+          }
+        }
+      ],
+      "filter": [
+        {
+          "nested": {
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "type.value.keyword": {
+                        "query": "PRODUCT",
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  },
+                  {
+                    "match": {
+                      "type.valueClass": {
+                        "query": "io.evitadb.test.Entities",
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            },
+            "path": "type",
+            "ignore_unmapped": false,
+            "score_mode": "max",
+            "boost": 1.0
+          }
+        }
+      ],
+      "adjust_pure_negative": true,
+      "boost": 1.0
+    }
+  },
+  "post_filter": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "finalPrice": {
+              "from": 80,
+              "to": 150,
+              "include_lower": true,
+              "include_upper": true,
+              "boost": 1.0
+            }
+          }
+        }
+      ],
+      "adjust_pure_negative": true,
+      "boost": 1.0
+    }
+  },
+  "_source": false,
+  "sort": [
+    {
+      "primaryKey": {
+        "order": "asc"
+      }
+    }
+  ],
+  "runtime_mappings": {
+    "finalPrice": {
+      "type": "double",
+      "script": "if(params._source.priceInnerRecordHandling.value == 'NONE'){double minPrice = 100000000;double minId = 100000000;for (item in params._source.prices) {if(item.priceList == 'vip'){if(item.indexed == true && item.dropped == false){if(item.currency == 'EUR'){if(item.validity == null || (item.validity.gte < 1273010400 && item.validity.lte > 1273010400)){emit(item.priceWithoutVat);return;}}}}}if(minPrice != 100000000){emit(minPrice);return;}for (item in params._source.prices) {if(item.priceList == 'basic'){if(item.indexed == true && item.dropped == false){if(item.currency == 'EUR'){if(item.validity == null || (item.validity.gte < 1273010400 && item.validity.lte > 1273010400)){emit(item.priceWithoutVat);return;}}}}}if(minPrice != 100000000){emit(minPrice);return;}emit(minPrice);}Map filteredPrices = new HashMap();for (item in params._source.prices) {if(item.priceList == 'vip'){if(item.indexed == true && item.dropped == false){if(item.currency == 'EUR'){if(item.validity == null || (item.validity.gte < 1273010400 && item.validity.lte > 1273010400)){def priceRec = filteredPrices.get(item.innerRecordId);if(priceRec == null){priceRec = item.priceWithoutVat;}filteredPrices.put(item.innerRecordId,priceRec);}}}}}for (item in params._source.prices) {if(item.priceList == 'basic'){if(item.indexed == true && item.dropped == false){if(item.currency == 'EUR'){if(item.validity == null || (item.validity.gte < 1273010400 && item.validity.lte > 1273010400)){def priceRec = filteredPrices.get(item.innerRecordId);if(priceRec == null){priceRec = item.priceWithoutVat;}filteredPrices.put(item.innerRecordId,priceRec);}}}}}if(params._source.priceInnerRecordHandling.value == 'FIRST_OCCURRENCE'){double minFOPrice = 100000000;for (item in filteredPrices.values()) {if(minFOPrice > item && item > 80 && item < 150 ){minFOPrice = item;}}if(minFOPrice != 100000000){emit(minFOPrice);}return;}if(params._source.priceInnerRecordHandling.value == 'SUM'){double minFOPrice = 0;for (item in filteredPrices.values()) {minFOPrice += item;}emit(minFOPrice);return;}"
+    }
+  }
+}

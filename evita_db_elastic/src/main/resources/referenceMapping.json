@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "type": {
+      "type": "nested"
+    },
+    "primaryKey": {
+      "type": "long"
+    },
+    "groupType": {
+      "type": "nested"
+    },
+    "groupPrimaryKey": {
+      "type": "long"
+    },
+    "simpleType": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    }
+  }
+}

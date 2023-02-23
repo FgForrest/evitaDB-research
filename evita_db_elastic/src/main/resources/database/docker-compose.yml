@@ -1,0 +1,48 @@
+version: '2.2'
+services:
+  evita_elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.2
+    container_name: evita_elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms10g -Xmx10g"
+      - xpack.security.enabled=true
+      - ELASTIC_PASSWORD=xEu5qtDytAG1zOKPeiv1eWJqA6
+    volumes:
+      - elastic-data:/usr/share/elasticsearch/data
+      - elastic-backup:/usr/share/elasticsearch/backup
+      - logs:/usr/share/elasticsearch/logs
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
+  evita_kibana:
+    image: docker.elastic.co/kibana/kibana:8.4.2
+    container_name: evita_kibana
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://evita_elasticsearch:9200
+      ELASTICSEARCH_HOSTS: http://evita_elasticsearch:9200
+      ELASTICSEARCH_PASSWORD: xEu5qtDytAG1zOKPeiv1eWJqA6
+      ELASTICSEARCH_USERNAME: elastic
+    networks:
+      - elastic
+
+volumes:
+  data01:
+    driver: local
+  elastic-data:
+    driver: local
+  elastic-backup:
+    driver: local
+  logs:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge

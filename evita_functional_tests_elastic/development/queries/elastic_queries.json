@@ -1,0 +1,415 @@
+
+
+
+********Should return multiple entities by attribute in set of values*******
+
+GET evita_testcatalog/_search
+{
+"query": {
+  "bool": {
+    "must": [
+      {
+        "nested": {
+          "path": "type",
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "match": {
+                    "type.value.keyword": "PRODUCT"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "nested": {
+          "path": filterByVisitor.getPathPrefix() + "attributes.attributeValues.value",
+          "query": {
+            "bool": {
+              "should": [
+                {
+                  "match_phrase": {
+                    filterByVisitor.getPathPrefix() + "attributes.attributeValues.value.keyword": {
+                      "query": "Ergonomic-Granite-Wallet-4"
+                    }
+                  }
+                },
+                {
+                  "match_phrase": {
+                    filterByVisitor.getPathPrefix() + "attributes.attributeValues.value.keyword": {
+                      "query": "Ergonomic-Steel-Plate-6"
+                    }
+                  }
+                },
+                {
+                  "match_phrase": {
+                    filterByVisitor.getPathPrefix() + "attributes.attributeValues.value.keyword": {
+                      "query": "Intelligent-Granite-Wallet-11"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+},
+"_source": false,
+  "sort": [
+    {
+      "primaryKey": {
+        "order": "asc"
+      }
+    }
+  ]
+}
+
+/* TEST: Should return entities sorted by BigDecimal attribute
+- zde bylo treba upravit konec query (sorting)
+
+@David
+*/
+
+GET evita_testcatalog/_search
+{
+  "from": 0,
+  "size": 10000,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "nested": {
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      filterByVisitor.getPathPrefix() + "attributes.attributeValues.key.attributeName.keyword": {
+                        "query": "quantity",
+                        "operator": "AND",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  }
+                ],
+                "filter": [
+                  {
+                    "nested": {
+                      "query": {
+                        "bool": {
+                          "must": [
+                            {
+                              "range": {
+                                filterByVisitor.getPathPrefix() + "attributes.attributeValues.value.bigDecimal": {
+                                  "from": null,
+                                  "to": "250",
+                                  "include_lower": true,
+                                  "include_upper": false,
+                                  "boost": 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "adjust_pure_negative": true,
+                          "boost": 1.0
+                        }
+                      },
+                      "path": filterByVisitor.getPathPrefix() + "attributes.attributeValues.value",
+                      "ignore_unmapped": false,
+                      "score_mode": "max",
+                      "boost": 1.0
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            },
+            "path": filterByVisitor.getPathPrefix() + "attributes.attributeValues",
+            "ignore_unmapped": false,
+            "score_mode": "max",
+            "boost": 1.0
+          }
+        },
+        {
+          "nested": {
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "type.value.keyword": {
+                        "query": "PRODUCT",
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  },
+                  {
+                    "match": {
+                      "type.valueClass": {
+                        "query": "io.evitadb.test.Entities",
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            },
+            "path": "type",
+            "ignore_unmapped": false,
+            "score_mode": "max",
+            "boost": 1.0
+          }
+        }
+      ],
+      "adjust_pure_negative": true,
+      "boost": 1.0
+    }
+  },
+  "_source": false,
+  "sort" : [
+       {
+          "attributes.attributeValues.value.bigDecimal": { //cesta s konkretnim atributem, podle ktereho se to bude radit (pokud bude sortovani na jiny atribut, tak staci zmenit koncovku)
+             "order" : "asc",
+             "nested": {
+                "path": "attributes.attributeValues.value" //cesta k nested dokumentu
+                }
+             }
+          }
+    ]
+}
+
+/* DONE TEST: Should return entities sorted by BigDecimal attribute
+- tento test je jiz funkcni (zmena operatoru z OR na AND) a query vkladam jen informativne
+
+@David
+*/
+
+GET evita_testcatalog/_search
+{
+  "from": 0,
+  "size": 10000,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "nested": {
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      filterByVisitor.getPathPrefix() + "attributes.attributeValues.key.attributeName.keyword": {
+                        "query": "code",
+                        "operator": "AND", // zde byla zmena z OR na AND aby platily obe podminky
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  }
+                ],
+                "filter": [
+                  {
+                    "nested": {
+                      "query": {
+                        "bool": {
+                          "must": [
+                            {
+                              "match": {
+                                filterByVisitor.getPathPrefix() + "attributes.attributeValues.value.keyword": {
+                                  "query": "Aerodynamic-Steel-Wallet-8",
+                                  "operator": "AND", // zde byla zmena z OR na AND aby platily obe podminky
+                                  "prefix_length": 0,
+                                  "max_expansions": 50,
+                                  "fuzzy_transpositions": true,
+                                  "lenient": false,
+                                  "zero_terms_query": "NONE",
+                                  "auto_generate_synonyms_phrase_query": true,
+                                  "boost": 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "adjust_pure_negative": true,
+                          "boost": 1.0
+                        }
+                      },
+                      "path": filterByVisitor.getPathPrefix() + "attributes.attributeValues.value",
+                      "ignore_unmapped": false,
+                      "score_mode": "max",
+                      "boost": 1.0
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            },
+            "path": filterByVisitor.getPathPrefix() + "attributes.attributeValues",
+            "ignore_unmapped": false,
+            "score_mode": "max",
+            "boost": 1.0
+          }
+        },
+        {
+          "nested": {
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "type.value.keyword": {
+                        "query": "PRODUCT",
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  },
+                  {
+                    "match": {
+                      "type.valueClass": {
+                        "query": "io.evitadb.test.Entities",
+                        "operator": "OR",
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0
+                      }
+                    }
+                  }
+                ],
+                "adjust_pure_negative": true,
+                "boost": 1.0
+              }
+            },
+            "path": "type",
+            "ignore_unmapped": false,
+            "score_mode": "max",
+            "boost": 1.0
+          }
+        }
+      ],
+      "adjust_pure_negative": true,
+      "boost": 1.0
+    }
+  },
+  "_source": false,
+  "sort": [
+    {
+      "primaryKey": {
+        "order": "asc"
+      }
+    }
+  ]
+}
+
+// Vladuv objev
+
+Query: #********Should return multiple entities by attribute in set of values*******
+
+GET evita_testcatalog/_search
+{
+"query": {
+  "bool": {
+    "must": [
+      {
+        "nested": {
+          "path": "type",
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "match": {
+                    "type.value.keyword": "PRODUCT"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "nested": {
+          "path": "attributes.attributeValues.value",
+          "query": {
+            "bool": {
+              "should": [
+                {
+                  "match_phrase": {
+                    "attributes.attributeValues.value.singleValue": {
+                      "query": "Ergonomic-Granite-Wallet-4"
+                    }
+                  }
+                },
+                {
+                  "match_phrase": {
+                    "attributes.attributeValues.value.singleValue": {
+                      "query": "Ergonomic-Steel-Plate-6"
+                    }
+                  }
+                },
+                {
+                  "match_phrase": {
+                    "attributes.attributeValues.value.singleValue": {
+                      "query": "Intelligent-Granite-Wallet-11"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+},
+"_source": false,
+  "sort": [
+    {
+      "primaryKey": {
+        "order": "asc"
+      }
+    }
+  ]
+}

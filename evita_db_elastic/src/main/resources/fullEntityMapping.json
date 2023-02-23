@@ -1,0 +1,64 @@
+{
+  "properties": {
+    "dropped": {
+      "type": "boolean"
+    },
+    "primaryKey": {
+      "type": "long"
+    },
+    "type": {
+      "type": "nested"
+    },
+
+    "associatedData": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "attribute": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "hierarchicalPlacement": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "locales": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "priceInnerRecordHandling": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "prices": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "priceVersion": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "references": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "schema": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    },
+    "version": {
+      "type": "object",
+      "enabled": false,
+      "dynamic": false
+    }
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "properties": {
+    "associatedData": {
+      "type": "object",
+      "enabled": false
+    },
+    "notSellablePrices": {
+      "type": "object",
+      "enabled": false
+    },
+    "attribute": {
+      "type": "nested",
+      "properties": {
+        "attributeName": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "locale": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "numberValue": {
+          "type": "scaled_float",
+          "scaling_factor": 100
+        },
+        "value": {
+          "type": "nested",
+          "properties": {
+            "singleValue": {
+              "type": "text",
+              "fielddata": true,
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "number": {
+              "type": "scaled_float",
+              "scaling_factor": 100
+            },
+            "values": {
+              "type": "nested",
+              "properties": {
+                "singleValue": {
+                  "type": "text",
+                  "fielddata": true,
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "date": {
+                  "type": "float"
+                },
+                "dateRange": {
+                  "type": "nested"
+                },
+                "number": {
+                  "type": "scaled_float",
+                  "scaling_factor": 100
+                },
+                "integerRange": {
+                  "type": "nested"
+                },
+                "multiple": {
+                  "type": "flattened"
+                },
+                "other": {
+                  "type": "flattened"
+                }
+              }
+            },
+            "date": {
+              "type": "float"
+            },
+            "dateRange": {
+              "type": "nested"
+            },
+            "integerRange": {
+              "type": "nested"
+            },
+            "multiple": {
+              "type": "flattened"
+            },
+            "other": {
+              "type": "flattened"
+            }
+          }
+        }
+      }
+    },
+    "hierarchicalPlacement": {
+      "properties": {
+        "dropped": {
+          "type": "boolean"
+        },
+        "orderAmongSiblings": {
+          "type": "long"
+        },
+        "parentPrimaryKey": {
+          "type": "long"
+        },
+        "version": {
+          "type": "long"
+        }
+      }
+    },
+    "paths": {
+      "type": "nested",
+      "properties": {
+        "rightBound": {
+          "type": "long"
+        },
+        "leftBound": {
+          "type": "long"
+        },
+        "type": {
+          "type": "nested"
+        },
+        "ui": {
+          "type": "keyword"
+        }
+      }
+    },
+    "locales": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "priceInnerRecordHandling": {
+      "type": "nested"
+    },
+    "prices": {
+      "type": "nested",
+      "properties": {
+        "currency": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "priceList": {
+          "type": "text",
+          "fielddata": true,
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "priceWithVat": {
+          "type": "double"
+        },
+        "priceWithoutVat": {
+          "type": "double"
+        },
+        "priority": {
+          "type": "long"
+        },
+        "validity": {
+          "type": "nested"
+        }
+      }
+    },
+    "primaryKey": {
+      "type": "long"
+    },
+    "references": {
+      "type": "nested",
+      "properties": {
+        "sortRefs": {
+          "type": "nested",
+          "properties": {
+            "valueToSort": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "combinedField": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        },
+        "referencedEntity": {
+          "type": "keyword"
+        },
+        "simpleType": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "referencedEntityType": {
+          "type": "nested"
+        },
+        "attribute": {
+          "type": "nested",
+          "properties": {
+            "attributeName": {
+              "type": "keyword"
+            },
+            "locale": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "value": {
+              "type": "nested",
+              "properties": {
+                "key": {
+                  "type": "text",
+                  "fielddata": true,
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "singleValue": {
+                  "type": "text",
+                  "fielddata": true,
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "number": {
+                  "type": "scaled_float",
+                  "scaling_factor": 100
+                },
+                "valueWithType": {
+                  "type": "text",
+                  "fielddata": true,
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "values": {
+                  "type": "nested",
+                  "properties": {
+                    "singleValue": {
+                      "type": "text",
+                      "fielddata": true,
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "date": {
+                      "type": "float"
+                    },
+                    "dateRange": {
+                      "type": "nested"
+                    },
+                    "integerRange": {
+                      "type": "nested"
+                    },
+                    "multiple": {
+                      "type": "flattened"
+                    },
+                    "other": {
+                      "type": "flattened"
+                    }
+                  }
+                },
+                "date": {
+                  "type": "float"
+                },
+                "dateRange": {
+                  "type": "nested"
+                },
+                "integerRange": {
+                  "type": "nested"
+                },
+                "multiple": {
+                  "type": "flattened"
+                },
+                "other": {
+                  "type": "flattened"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "type": {
+      "type": "nested"
+    }
+  }
+}

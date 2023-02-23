@@ -1,0 +1,1936 @@
+{
+  "version": 1,
+  "type": {
+    "valueClass": null,
+    "value": "Product"
+  },
+  "locales": [
+    "cs"
+  ],
+  "dropped": false,
+  "primaryKey": 199,
+  "references": [
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "systemId",
+          "valueToSort": "freeShipping6000"
+        }
+      ],
+      "simpleType": "Tag",
+      "referencedEntity": "Tag_577",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Tag"
+      },
+      "referencedEntityPrimaryKey": 577,
+      "types": [
+        "systemId"
+      ],
+      "attribute": [
+        {
+          "attributeName": "systemId",
+          "locale": null,
+          "value": {
+            "singleValue": "freeShipping6000",
+            "key": "systemId",
+            "valueWithType": "Tag_systemId"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "systemId",
+          "valueToSort": "exportovat-do-zbozaku"
+        }
+      ],
+      "simpleType": "Tag",
+      "referencedEntity": "Tag_43",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Tag"
+      },
+      "referencedEntityPrimaryKey": 43,
+      "types": [
+        "systemId"
+      ],
+      "attribute": [
+        {
+          "attributeName": "systemId",
+          "locale": null,
+          "value": {
+            "singleValue": "exportovat-do-zbozaku",
+            "key": "systemId",
+            "valueWithType": "Tag_systemId"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "path",
+          "valueToSort": "0000Akční leták"
+        },
+        {
+          "combinedField": "parentCatalog",
+          "valueToSort": "000000000senesi"
+        }
+      ],
+      "simpleType": "Category",
+      "referencedEntity": "Category_441532",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Category"
+      },
+      "referencedEntityPrimaryKey": 441532,
+      "types": [
+        "path",
+        "parentCatalog"
+      ],
+      "attribute": [
+        {
+          "attributeName": "path",
+          "locale": null,
+          "value": {
+            "singleValue": "Akční leták",
+            "key": "path",
+            "valueWithType": "Category_path"
+          },
+          "dropped": false,
+          "version": 1
+        },
+        {
+          "attributeName": "parentCatalog",
+          "locale": null,
+          "value": {
+            "singleValue": "senesi",
+            "key": "parentCatalog",
+            "valueWithType": "Category_parentCatalog"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_725763",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 725763,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 725910,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_445007",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 445007,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 444238,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_495501",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 495501,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 444982,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_503662",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 503662,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 442923,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_498295",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 498295,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 442912,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_498284",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 498284,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 495088,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_728045",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 728045,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 725911,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_495856",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 495856,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 495022,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "path",
+          "valueToSort": "Obklady a dlažby/Dekory"
+        },
+        {
+          "combinedField": "parentCatalog",
+          "valueToSort": "000000000senesi"
+        }
+      ],
+      "simpleType": "Category",
+      "referencedEntity": "Category_427563",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Category"
+      },
+      "referencedEntityPrimaryKey": 427563,
+      "types": [
+        "path",
+        "parentCatalog"
+      ],
+      "attribute": [
+        {
+          "attributeName": "path",
+          "locale": null,
+          "value": {
+            "singleValue": "Obklady a dlažby/Dekory",
+            "key": "path",
+            "valueWithType": "Category_path"
+          },
+          "dropped": false,
+          "version": 1
+        },
+        {
+          "attributeName": "parentCatalog",
+          "locale": null,
+          "value": {
+            "singleValue": "senesi",
+            "key": "parentCatalog",
+            "valueWithType": "Category_parentCatalog"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_445011",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 445011,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 444251,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "Stock",
+      "referencedEntity": "Stock_6",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Stock"
+      },
+      "referencedEntityPrimaryKey": 6,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_496350",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 496350,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 442926,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "parentCatalog",
+          "valueToSort": "000000000senesi"
+        }
+      ],
+      "simpleType": "Group",
+      "referencedEntity": "Group_145786",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Group"
+      },
+      "referencedEntityPrimaryKey": 145786,
+      "types": [
+        "parentCatalog"
+      ],
+      "attribute": [
+        {
+          "attributeName": "parentCatalog",
+          "locale": null,
+          "value": {
+            "singleValue": "senesi",
+            "key": "parentCatalog",
+            "valueWithType": "Group_parentCatalog"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "parentCatalog",
+          "valueToSort": "000000000senesi"
+        }
+      ],
+      "simpleType": "Manufacturer",
+      "referencedEntity": "Manufacturer_725232",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Manufacturer"
+      },
+      "referencedEntityPrimaryKey": 725232,
+      "types": [
+        "parentCatalog"
+      ],
+      "attribute": [
+        {
+          "attributeName": "parentCatalog",
+          "locale": null,
+          "value": {
+            "singleValue": "senesi",
+            "key": "parentCatalog",
+            "valueWithType": "Manufacturer_parentCatalog"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_725233",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 725233,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 725912,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "Stock",
+      "referencedEntity": "Stock_0",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Stock"
+      },
+      "referencedEntityPrimaryKey": 0,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "path",
+          "valueToSort": "Výprodej/Obklady a dlažby"
+        },
+        {
+          "combinedField": "parentCatalog",
+          "valueToSort": "000000000senesi"
+        }
+      ],
+      "simpleType": "Category",
+      "referencedEntity": "Category_440835",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Category"
+      },
+      "referencedEntityPrimaryKey": 440835,
+      "types": [
+        "path",
+        "parentCatalog"
+      ],
+      "attribute": [
+        {
+          "attributeName": "path",
+          "locale": null,
+          "value": {
+            "singleValue": "Výprodej/Obklady a dlažby",
+            "key": "path",
+            "valueWithType": "Category_path"
+          },
+          "dropped": false,
+          "version": 1
+        },
+        {
+          "attributeName": "parentCatalog",
+          "locale": null,
+          "value": {
+            "singleValue": "senesi",
+            "key": "parentCatalog",
+            "valueWithType": "Category_parentCatalog"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "parentCatalog",
+          "valueToSort": "000000000senesi"
+        }
+      ],
+      "simpleType": "RangeOfGoods",
+      "referencedEntity": "RangeOfGoods_728044",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "RangeOfGoods"
+      },
+      "referencedEntityPrimaryKey": 728044,
+      "types": [
+        "parentCatalog"
+      ],
+      "attribute": [
+        {
+          "attributeName": "parentCatalog",
+          "locale": null,
+          "value": {
+            "singleValue": "senesi",
+            "key": "parentCatalog",
+            "valueWithType": "RangeOfGoods_parentCatalog"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "parentCatalog",
+          "valueToSort": "000000000senesi"
+        }
+      ],
+      "simpleType": "PriceLevel",
+      "referencedEntity": "PriceLevel_725762",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "PriceLevel"
+      },
+      "referencedEntityPrimaryKey": 725762,
+      "types": [
+        "parentCatalog"
+      ],
+      "attribute": [
+        {
+          "attributeName": "parentCatalog",
+          "locale": null,
+          "value": {
+            "singleValue": "senesi",
+            "key": "parentCatalog",
+            "valueWithType": "PriceLevel_parentCatalog"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_495799",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 495799,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 477007,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [
+        {
+          "combinedField": "systemId",
+          "valueToSort": "00000000000sale"
+        }
+      ],
+      "simpleType": "Tag",
+      "referencedEntity": "Tag_23",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "Tag"
+      },
+      "referencedEntityPrimaryKey": 23,
+      "groupType": {
+        "valueClass": null,
+        "value": "Tag"
+      },
+      "groupPrimaryKey": 15,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "types": [
+        "systemId"
+      ],
+      "attribute": [
+        {
+          "attributeName": "systemId",
+          "locale": null,
+          "value": {
+            "singleValue": "sale",
+            "key": "systemId",
+            "valueWithType": "Tag_systemId"
+          },
+          "dropped": false,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "dropped": false,
+      "sortRefs": [],
+      "simpleType": "ParameterItem",
+      "referencedEntity": "ParameterItem_497137",
+      "referencedEntityType": {
+        "valueClass": null,
+        "value": "ParameterItem"
+      },
+      "referencedEntityPrimaryKey": 497137,
+      "groupType": {
+        "valueClass": null,
+        "value": "ParameterType"
+      },
+      "groupPrimaryKey": 446927,
+      "groupVersion": 1,
+      "groupDropped": false,
+      "attribute": []
+    }
+  ],
+  "types": [
+    "groupOrder_sortiment-49-1-3-2",
+    "referencedFiles",
+    "alias",
+    "quantity",
+    "tloustka",
+    "breadCrumbPath",
+    "availability",
+    "minOrderAmount",
+    "validity::GROUP::725762",
+    "groupOrder_cenovaSkupina-005",
+    "validity::GROUP::145786",
+    "validity",
+    "groupOrder_vyrobce-058",
+    "orderedQuantity",
+    "shortCode",
+    "validity::GROUP::728044",
+    "catalogNumber",
+    "validity::GROUP::725232",
+    "code",
+    "producerCode",
+    "visibility",
+    "status",
+    "saleRestriction",
+    "detailParameters",
+    "visibilityB2C",
+    "availabilityExt",
+    "unitCode",
+    "ean",
+    "cezarCode",
+    "onTheWay",
+    "url",
+    "statusB2C",
+    "groupOrder_fresh",
+    "stepOrderAmount",
+    "order",
+    "quantityOnStock",
+    "name",
+    "lastIndexed",
+    "brandCode",
+    "subtype"
+  ],
+  "attribute": [
+    {
+      "attributeName": "groupOrder_sortiment-49-1-3-2",
+      "locale": null,
+      "value": {
+        "singleValue": "Predecessor(previousRecordPrimaryKey=27)",
+        "key": "groupOrder_sortiment-49-1-3-2",
+        "valueWithType": "null_groupOrder_sortiment-49-1-3-2"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "referencedFiles",
+      "locale": null,
+      "value": {
+        "singleValue": "[Lcom.fg.cps.eshop.mediaGallery.publishing.dto.RefFileSet;@3e74da1f",
+        "key": "referencedFiles",
+        "valueWithType": "null_referencedFiles"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "alias",
+      "locale": null,
+      "value": {
+        "key": "alias",
+        "valueWithType": "null_alias",
+        "booleanValue": false
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "quantity",
+      "locale": null,
+      "value": {
+        "key": "quantity",
+        "valueWithType": "null_quantity",
+        "number": 1000046.0
+      },
+      "dropped": false,
+      "version": 1,
+      "numberValue": 1000046.0
+    },
+    {
+      "attributeName": "tloustka",
+      "locale": null,
+      "value": {
+        "key": "tloustka",
+        "valueWithType": "null_tloustka",
+        "number": 9.5
+      },
+      "dropped": false,
+      "version": 1,
+      "numberValue": 9.5
+    },
+    {
+      "attributeName": "breadCrumbPath",
+      "locale": null,
+      "value": {
+        "singleValue": "Obklady a dlažby/Dekory",
+        "key": "breadCrumbPath",
+        "valueWithType": "null_breadCrumbPath"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "availability",
+      "locale": null,
+      "value": {
+        "singleValue": "DEPEND_ON_STOCK",
+        "key": "availability",
+        "valueWithType": "null_availability"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "minOrderAmount",
+      "locale": null,
+      "value": {
+        "key": "minOrderAmount",
+        "valueWithType": "null_minOrderAmount",
+        "number": 1.0
+      },
+      "dropped": false,
+      "version": 1,
+      "numberValue": 1.0
+    },
+    {
+      "attributeName": "validity::GROUP::725762",
+      "locale": null,
+      "value": {
+        "key": "validity::GROUP::725762",
+        "valueWithType": "null_validity::GROUP::725762",
+        "dateRange": {
+          "gte": -31557014135600264,
+          "lte": 31556889832777199,
+          "dateFromZone": "Europe/Prague",
+          "dateToZone": "Europe/Prague"
+        }
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "groupOrder_cenovaSkupina-005",
+      "locale": null,
+      "value": {
+        "singleValue": "Predecessor(previousRecordPrimaryKey=27)",
+        "key": "groupOrder_cenovaSkupina-005",
+        "valueWithType": "null_groupOrder_cenovaSkupina-005"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "validity::GROUP::145786",
+      "locale": null,
+      "value": {
+        "key": "validity::GROUP::145786",
+        "valueWithType": "null_validity::GROUP::145786",
+        "dateRange": {
+          "gte": -31557014135600264,
+          "lte": 31556889832777199,
+          "dateFromZone": "Europe/Prague",
+          "dateToZone": "Europe/Prague"
+        }
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "validity",
+      "locale": null,
+      "value": {
+        "key": "validity",
+        "valueWithType": "null_validity",
+        "dateRange": {
+          "gte": -2208992400,
+          "lte": 7258114800,
+          "dateFromZone": "Europe/Prague",
+          "dateToZone": "Europe/Prague"
+        }
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "groupOrder_vyrobce-058",
+      "locale": null,
+      "value": {
+        "singleValue": "Predecessor(previousRecordPrimaryKey=27)",
+        "key": "groupOrder_vyrobce-058",
+        "valueWithType": "null_groupOrder_vyrobce-058"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "orderedQuantity",
+      "locale": null,
+      "value": {
+        "key": "orderedQuantity",
+        "valueWithType": "null_orderedQuantity",
+        "number": 42.0
+      },
+      "dropped": false,
+      "version": 1,
+      "numberValue": 42.0
+    },
+    {
+      "attributeName": "shortCode",
+      "locale": null,
+      "value": {
+        "singleValue": "AF0214",
+        "key": "shortCode",
+        "valueWithType": "null_shortCode"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "validity::GROUP::728044",
+      "locale": null,
+      "value": {
+        "key": "validity::GROUP::728044",
+        "valueWithType": "null_validity::GROUP::728044",
+        "dateRange": {
+          "gte": -31557014135600264,
+          "lte": 31556889832777199,
+          "dateFromZone": "Europe/Prague",
+          "dateToZone": "Europe/Prague"
+        }
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "catalogNumber",
+      "locale": null,
+      "value": {
+        "singleValue": "LFRESHRE",
+        "key": "catalogNumber",
+        "valueWithType": "null_catalogNumber"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "validity::GROUP::725232",
+      "locale": null,
+      "value": {
+        "key": "validity::GROUP::725232",
+        "valueWithType": "null_validity::GROUP::725232",
+        "dateRange": {
+          "gte": -31557014135600264,
+          "lte": 31556889832777199,
+          "dateFromZone": "Europe/Prague",
+          "dateToZone": "Europe/Prague"
+        }
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "code",
+      "locale": null,
+      "value": {
+        "singleValue": "AF0214",
+        "key": "code",
+        "valueWithType": "null_code"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "producerCode",
+      "locale": null,
+      "value": {
+        "singleValue": "LFRESHRE",
+        "key": "producerCode",
+        "valueWithType": "null_producerCode"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "visibility",
+      "locale": null,
+      "value": {
+        "singleValue": "VISIBLE",
+        "key": "visibility",
+        "valueWithType": "null_visibility"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "status",
+      "locale": null,
+      "value": {
+        "singleValue": "ACTIVE",
+        "key": "status",
+        "valueWithType": "null_status"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "saleRestriction",
+      "locale": null,
+      "value": {
+        "singleValue": "WITHOUT_RESTRICTION",
+        "key": "saleRestriction",
+        "valueWithType": "null_saleRestriction"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "detailParameters",
+      "locale": null,
+      "value": {
+        "singleValue": "[Lcom.fg.cps.eshop.frontend.publishing.dto.ParameterWithUsage;@77b84c33",
+        "key": "detailParameters",
+        "valueWithType": "null_detailParameters"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "visibilityB2C",
+      "locale": null,
+      "value": {
+        "singleValue": "VISIBLE",
+        "key": "visibilityB2C",
+        "valueWithType": "null_visibilityB2C"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "availabilityExt",
+      "locale": null,
+      "value": {
+        "singleValue": "9",
+        "key": "availabilityExt",
+        "valueWithType": "null_availabilityExt"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "unitCode",
+      "locale": null,
+      "value": {
+        "singleValue": "ks",
+        "key": "unitCode",
+        "valueWithType": "null_unitCode"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "ean",
+      "locale": null,
+      "value": {
+        "singleValue": "8592127055565",
+        "key": "ean",
+        "valueWithType": "null_ean"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "cezarCode",
+      "locale": null,
+      "value": {
+        "singleValue": "AF0214",
+        "key": "cezarCode",
+        "valueWithType": "null_cezarCode"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "onTheWay",
+      "locale": null,
+      "value": {
+        "singleValue": "28",
+        "key": "onTheWay",
+        "valueWithType": "null_onTheWay"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "url",
+      "locale": "cs",
+      "value": {
+        "singleValue": "fineza-fresh-listela-4-5x50-cube-red",
+        "key": "url",
+        "valueWithType": "null_url"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "statusB2C",
+      "locale": null,
+      "value": {
+        "singleValue": "PRIVATE",
+        "key": "statusB2C",
+        "valueWithType": "null_statusB2C"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "groupOrder_fresh",
+      "locale": null,
+      "value": {
+        "singleValue": "Predecessor(previousRecordPrimaryKey=26)",
+        "key": "groupOrder_fresh",
+        "valueWithType": "null_groupOrder_fresh"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "stepOrderAmount",
+      "locale": null,
+      "value": {
+        "key": "stepOrderAmount",
+        "valueWithType": "null_stepOrderAmount",
+        "number": 1.0
+      },
+      "dropped": false,
+      "version": 1,
+      "numberValue": 1.0
+    },
+    {
+      "attributeName": "order",
+      "locale": null,
+      "value": {
+        "singleValue": "Predecessor(previousRecordPrimaryKey=170)",
+        "key": "order",
+        "valueWithType": "null_order"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "quantityOnStock",
+      "locale": null,
+      "value": {
+        "singleValue": "PublishedCatalogEntityProductQuantity(quantity=1000046.00000, quantityInStock={StockKey(catalogCode=senesi, stockCode=BRNO)=0.00000, StockKey(catalogCode=senesi, stockCode=PRAHA)=0.00000, StockKey(catalogCode=senesi, stockCode=B2B_FULL_STOCK)=1000000.00000, StockKey(catalogCode=senesi, stockCode=SIKOCB)=0.00000, StockKey(catalogCode=senesi, stockCode=VODNANY)=0.00000, StockKey(catalogCode=senesi, stockCode=PLZENSTU)=46.00000}, stockCode=AF0214, stockCatalog=senesi, referenceProductIdOfQuantityInfo=92438)",
+        "key": "quantityOnStock",
+        "valueWithType": "null_quantityOnStock"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "name",
+      "locale": "cs",
+      "value": {
+        "singleValue": "Fineza Fresh listela 4,5x50 cube red",
+        "key": "name",
+        "valueWithType": "null_name"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "lastIndexed",
+      "locale": null,
+      "value": {
+        "key": "lastIndexed",
+        "valueWithType": "null_lastIndexed",
+        "number": 1631444744416
+      },
+      "dropped": false,
+      "version": 1,
+      "numberValue": 1631444744416
+    },
+    {
+      "attributeName": "brandCode",
+      "locale": null,
+      "value": {
+        "singleValue": "<NO_BRAND>",
+        "key": "brandCode",
+        "valueWithType": "null_brandCode"
+      },
+      "dropped": false,
+      "version": 1
+    },
+    {
+      "attributeName": "subtype",
+      "locale": null,
+      "value": {
+        "singleValue": "BASIC",
+        "key": "subtype",
+        "valueWithType": "null_subtype"
+      },
+      "dropped": false,
+      "version": 1
+    }
+  ],
+  "priceVersion": 1,
+  "priceInnerRecordHandling": {
+    "valueClass": "io.evitadb.api.data.PriceInnerRecordHandling",
+    "value": "NONE"
+  },
+  "prices": [
+    {
+      "priceList": "PC-L",
+      "currency": "CZK",
+      "priceWithoutVat": 62.31,
+      "priceWithVat": 75.14,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719910,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-C",
+      "currency": "CZK",
+      "priceWithoutVat": 89.01,
+      "priceWithVat": 107.7,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719900,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "reference-b2b",
+      "currency": "CZK",
+      "priceWithoutVat": 89.33,
+      "priceWithVat": 107.7,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719904,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-B",
+      "currency": "CZK",
+      "priceWithoutVat": 73.83,
+      "priceWithVat": 89.33,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719899,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "IC-26390248",
+      "currency": "CZK",
+      "priceWithoutVat": 96.48,
+      "priceWithVat": 116.88,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 4182213,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-A",
+      "currency": "CZK",
+      "priceWithoutVat": 89.01,
+      "priceWithVat": 107.7,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719898,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-X",
+      "currency": "CZK",
+      "priceWithoutVat": 62.31,
+      "priceWithVat": 75.14,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 2772877,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "IC-25202359",
+      "currency": "CZK",
+      "priceWithoutVat": 62.31,
+      "priceWithVat": 75.14,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 1637426,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-Q",
+      "currency": "CZK",
+      "priceWithoutVat": 89.01,
+      "priceWithVat": 107.7,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 1435278,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "NC",
+      "currency": "CZK",
+      "priceWithoutVat": 40.26,
+      "priceWithVat": 48.42,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719902,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-G",
+      "currency": "CZK",
+      "priceWithoutVat": 64.98,
+      "priceWithVat": 78.48,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719907,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PNC",
+      "currency": "CZK",
+      "priceWithoutVat": 89.33,
+      "priceWithVat": 107.7,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719903,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-J",
+      "currency": "CZK",
+      "priceWithoutVat": 63.19,
+      "priceWithVat": 76.81,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719909,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-F",
+      "currency": "CZK",
+      "priceWithoutVat": 66.76,
+      "priceWithVat": 80.98,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719906,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-Z",
+      "currency": "CZK",
+      "priceWithoutVat": 93.8,
+      "priceWithVat": 113.54,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 2239009,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-I",
+      "currency": "CZK",
+      "priceWithoutVat": 64.98,
+      "priceWithVat": 78.48,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719908,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-E",
+      "currency": "CZK",
+      "priceWithoutVat": 71.21,
+      "priceWithVat": 85.99,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719905,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-D",
+      "currency": "CZK",
+      "priceWithoutVat": 89.33,
+      "priceWithVat": 107.7,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 719901,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    },
+    {
+      "priceList": "PC-P",
+      "currency": "CZK",
+      "priceWithoutVat": 89.33,
+      "priceWithVat": 107.7,
+      "indexed": true,
+      "dropped": false,
+      "version": 1,
+      "priceId": 2239008,
+      "vat": 21.0,
+      "priceInnerRecordHandling": "NONE",
+      "hasValidity": true,
+      "validity": {
+        "gte": -2208992400,
+        "lte": 7258114800,
+        "dateFromZone": "Europe/Prague",
+        "dateToZone": "Europe/Prague"
+      }
+    }
+  ],
+  "notSellablePrices": [],
+  "indexName": "evita_senesi",
+  "associatedData": {
+    "type": {
+      "valueClass": null,
+      "value": "Product"
+    },
+    "indexName": "evita_senesi",
+    "reflectionLookup": null,
+    "associatedDataValues": [
+      {
+        "version": 1,
+        "key": {
+          "associatedDataName": "allActiveUrls",
+          "localized": false
+        },
+        "value": {
+          "keys": [],
+          "properties": {
+            "type": "java.io.Serializable",
+            "root": {
+              "charIndex": [
+                101
+              ],
+              "children": [
+                {
+                  "charIndex": [
+                    108,
+                    117
+                  ],
+                  "children": [
+                    {
+                      "charIndex": [],
+                      "children": [],
+                      "edgeLabel": [],
+                      "values": [
+                        "cs"
+                      ],
+                      "endOfWord": true
+                    },
+                    {
+                      "charIndex": [],
+                      "children": [],
+                      "edgeLabel": [],
+                      "values": [
+                        "fineza-fresh-listela-4-5x50-cube-red"
+                      ],
+                      "endOfWord": true
+                    }
+                  ],
+                  "edgeLabel": [
+                    "lang",
+                    "url"
+                  ],
+                  "values": [],
+                  "endOfWord": false
+                }
+              ],
+              "edgeLabel": [
+                "entityUrls[0]."
+              ],
+              "values": [],
+              "endOfWord": false
+            },
+            "size": 0,
+            "empty": false
+          },
+          "keyIndex": {
+            "types": {},
+            "mapItself": {}
+          }
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "associatedDataName": "externalContent",
+          "localized": false
+        },
+        "value": {
+          "keys": [],
+          "properties": {
+            "type": "java.io.Serializable",
+            "root": {
+              "charIndex": [
+                101
+              ],
+              "children": [
+                {
+                  "charIndex": [],
+                  "children": [],
+                  "edgeLabel": [],
+                  "values": [],
+                  "endOfWord": true
+                }
+              ],
+              "edgeLabel": [
+                "externalContents"
+              ],
+              "values": [],
+              "endOfWord": false
+            },
+            "size": 0,
+            "empty": false
+          },
+          "keyIndex": {
+            "types": {},
+            "mapItself": {}
+          }
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "associatedDataName": "SenesiPublishedStockBatchQuantities",
+          "localized": false
+        },
+        "value": {
+          "keys": [],
+          "properties": {
+            "type": "java.io.Serializable",
+            "root": {
+              "charIndex": [
+                113
+              ],
+              "children": [
+                {
+                  "charIndex": [],
+                  "children": [],
+                  "edgeLabel": [],
+                  "values": [],
+                  "endOfWord": true
+                }
+              ],
+              "edgeLabel": [
+                "quantities"
+              ],
+              "values": [],
+              "endOfWord": false
+            },
+            "size": 0,
+            "empty": false
+          },
+          "keyIndex": {
+            "types": {},
+            "mapItself": {}
+          }
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "associatedDataName": "productBundles",
+          "localized": false
+        },
+        "value": {
+          "keys": [],
+          "properties": {
+            "type": "java.io.Serializable",
+            "root": {
+              "charIndex": [
+                98
+              ],
+              "children": [
+                {
+                  "charIndex": [],
+                  "children": [],
+                  "edgeLabel": [],
+                  "values": [],
+                  "endOfWord": true
+                }
+              ],
+              "edgeLabel": [
+                "bundles"
+              ],
+              "values": [],
+              "endOfWord": false
+            },
+            "size": 0,
+            "empty": false
+          },
+          "keyIndex": {
+            "types": {},
+            "mapItself": {}
+          }
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "associatedDataName": "ProductFeed",
+          "localized": false
+        },
+        "value": {
+          "keys": [],
+          "properties": {
+            "type": "java.io.Serializable",
+            "root": {
+              "charIndex": [
+                105
+              ],
+              "children": [
+                {
+                  "charIndex": [],
+                  "children": [],
+                  "edgeLabel": [],
+                  "values": [],
+                  "endOfWord": true
+                }
+              ],
+              "edgeLabel": [
+                "items"
+              ],
+              "values": [],
+              "endOfWord": false
+            },
+            "size": 0,
+            "empty": false
+          },
+          "keyIndex": {
+            "types": {},
+            "mapItself": {}
+          }
+        },
+        "dropped": false
+      },
+      {
+        "version": 1,
+        "key": {
+          "associatedDataName": "labels",
+          "localized": false
+        },
+        "value": {
+          "keys": [
+            "name",
+            "unitCode",
+            "shortDescription"
+          ],
+          "properties": {
+            "type": "java.io.Serializable",
+            "root": {
+              "charIndex": [
+                108
+              ],
+              "children": [
+                {
+                  "charIndex": [
+                    98,
+                    110
+                  ],
+                  "children": [
+                    {
+                      "charIndex": [
+                        48,
+                        49,
+                        50
+                      ],
+                      "children": [
+                        {
+                          "charIndex": [],
+                          "children": [],
+                          "edgeLabel": [],
+                          "values": [
+                            "Fineza Fresh listela 4,5x50 cube red"
+                          ],
+                          "endOfWord": true
+                        },
+                        {
+                          "charIndex": [],
+                          "children": [],
+                          "edgeLabel": [],
+                          "values": [
+                            "ks"
+                          ],
+                          "endOfWord": true
+                        },
+                        {
+                          "charIndex": [],
+                          "children": [],
+                          "edgeLabel": [],
+                          "values": [
+                            "Upozornění: U výprodejových položek doporučujeme ověřit si dostupnost na naší zákaznické lince."
+                          ],
+                          "endOfWord": true
+                        }
+                      ],
+                      "edgeLabel": [
+                        "0]",
+                        "1]",
+                        "2]"
+                      ],
+                      "values": [],
+                      "endOfWord": false
+                    },
+                    {
+                      "charIndex": [],
+                      "children": [],
+                      "edgeLabel": [],
+                      "values": [
+                        "cs"
+                      ],
+                      "endOfWord": true
+                    }
+                  ],
+                  "edgeLabel": [
+                    "bels[#",
+                    "nguage"
+                  ],
+                  "values": [],
+                  "endOfWord": false
+                }
+              ],
+              "edgeLabel": [
+                "la"
+              ],
+              "values": [],
+              "endOfWord": false
+            },
+            "size": 0,
+            "empty": false
+          },
+          "keyIndex": {
+            "types": {
+              "name": null,
+              "shortDescription": null,
+              "unitCode": null
+            },
+            "mapItself": {
+              "name": 0,
+              "shortDescription": 2,
+              "unitCode": 1
+            }
+          }
+        },
+        "dropped": false
+      }
+    ]
+  },
+  "paths": [
+    {
+      "rightBound": 503433149700173,
+      "leftBound": 476936668137007,
+      "type": {
+        "valueClass": null,
+        "value": "Category"
+      }
+    },
+    {
+      "rightBound": 32479558045173,
+      "leftBound": 31624832833459,
+      "type": {
+        "valueClass": null,
+        "value": "Category"
+      }
+    },
+    {
+      "rightBound": 457277988267560,
+      "leftBound": 456423263055846,
+      "type": {
+        "valueClass": null,
+        "value": "Category"
+      }
+    }
+  ]
+}
