@@ -19,7 +19,7 @@ in [this repository](https://github.com/FgForrest/evitaDB-research), and you can
 
 The performance tests are implemented using [JMH](https://github.com/openjdk/jmh) and can be run 
 using `io.evitadb.BenchmarkRunner` class. The tests working with real-world datasets expect data in folder named `data`
-in the root of the Git repository where [this archive is unzipped](https://drive.google.com/file/d/1M4w4ZW2CI2T_IJ7LpNsr4n7xgJkFoV73/view?usp=share_link).
+in the root of the Git repository where [this archive is unzipped](https://evitadb.io/download/performance_test_datasets.zip)).
 
 The [instructions for running tests](docs/test_suite.md) are in separate document.
 
